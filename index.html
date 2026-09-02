@@ -3,78 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aryel Evelin | Copywriting, Roteiros & Storytelling | Fotografia</title>
+    <title>Aryel Evelin | Growth, Conteúdo Estratégico & Storytelling | Marketing & Ads</title>
     
     <!-- FAVICON -->
-    <link rel="icon" type="image/png" href="./favicon.png">
+    <link rel="icon" type="image/png" href="../favicon.png">
 
-    <!-- OPEN GRAPH (PRÉVIA PARA REDES SOCIAIS) -->
-    <meta property="og:title" content="Aryel Evelin | Copywriting, Roteiros & Storytelling | Fotografia">
-    <meta property="og:description" content="Especialista em unir visão estratégica de negócios, copywriting, crescimento de audiência e storytelling de alto impacto.">
-    <meta property="og:image" content="./foto1.jpg">
-    <meta property="og:url" content="https://aryel-evelin.github.io/portfolio/">
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Aryel Evelin | Growth, Conteúdo Estratégico & Storytelling | Marketing & Ads">
+    <meta property="og:description" content="Especialista em unir visão estratégica de negócios, growth, tráfego pago, IA e storytelling de alto impacto.">
+    <meta property="og:image" content="../foto1.jpg">
+    <meta property="og:url" content="https://aryel-evelin.github.io/tshaped/marketing/">
     <meta property="og:type" content="website">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .fade-bg {
-            opacity: 0;
-            transition: opacity 1.5s ease-in-out;
+        .fixed-marketing-bg {
             position: absolute;
             inset: 0;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
-        .fade-bg.active {
-            opacity: 1;
-        }
     </style>
 </head>
 <body class="bg-[#0f0e0d] text-[#e7e5e4] antialiased selection:bg-[#cc0000] selection:text-white">
 
-    <!-- MENU DE NAVEGAÇÃO FIXO E CENTRALIZADO -->
+    <!-- MENU DE NAVEGAÇÃO -->
     <nav class="sticky top-0 z-50 bg-[#0f0e0d]/90 backdrop-blur-md border-b border-[#292524]">
         <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between sm:justify-center relative">
             <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-sm font-medium">
-                <a href="#inicio" data-pt="Início" data-en="Home" class="text-[#a8a29e] hover:text-[#ff1a1a] transition">Início</a>
+                <a href="../index.html" data-pt="← Voltar ao Hub" data-en="← Back to Hub" class="text-[#ff3333] hover:text-[#ff6666] font-semibold transition">← Voltar ao Hub</a>
                 <a href="#destaques" data-pt="Destaques" data-en="Highlights" class="text-[#a8a29e] hover:text-[#ff1a1a] transition">Destaques</a>
                 <a href="#" id="resume-link" target="_blank" data-pt="Currículo" data-en="Resume" class="text-[#a8a29e] hover:text-[#ff1a1a] transition">Currículo</a>
                 <a href="https://www.linkedin.com/in/aryel-evelin-a7507129/" target="_blank" class="text-[#a8a29e] hover:text-[#ff1a1a] transition">LinkedIn</a>
                 <a href="https://instagram.com/aryel_evelin" target="_blank" class="text-[#a8a29e] hover:text-[#ff1a1a] transition">Instagram</a>
+                <a href="https://wa.me/5564993055216" target="_blank" data-pt="WhatsApp" data-en="WhatsApp" class="text-[#a8a29e] hover:text-[#25d366] transition">
+                    WhatsApp
+                </a>
             </div>
 
-            <!-- BOTÃO DE ALTERNÂNCIA DE IDIOMA -->
-            <button onclick="toggleLanguage()" id="lang-btn" class="sm:absolute sm:right-6 px-3 py-1 bg-[#1c1917] hover:bg-[#292524] border border-[#292524] text-xs font-bold text-[#ff3333] rounded-md transition flex items-center gap-1">
-                🌐 <span id="lang-text">EN</span>
-            </button>
+            <!-- BOTÕES SUPERIORES (COMPARTILHAR & IDIOMA) -->
+            <div class="sm:absolute sm:right-6 flex items-center gap-2">
+                <button onclick="shareMarketing()" id="share-btn" title="Compartilhar Portfólio de Marketing" class="px-2.5 py-1 bg-[#1c1917] hover:bg-[#292524] border border-[#292524] text-xs font-bold text-[#e7e5e4] hover:text-[#ff3333] rounded-md transition flex items-center justify-center cursor-pointer">
+                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/></svg>
+                </button>
+                <button onclick="toggleLanguage()" id="lang-btn" class="px-3 py-1 bg-[#1c1917] hover:bg-[#292524] border border-[#292524] text-xs font-bold text-[#ff3333] rounded-md transition flex items-center gap-1 cursor-pointer">
+                    🌐 <span id="lang-text">EN</span>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <!-- SEÇÃO 1: INÍCIO FULL-WIDTH -->
+    <!-- SEÇÃO 1: INÍCIO -->
     <section id="inicio" class="relative w-full min-h-[90vh] flex flex-col justify-center items-center text-center py-24 px-6 overflow-hidden border-b border-[#292524]">
-        
-        <!-- Slideshow de Fundo -->
         <div class="absolute inset-0 z-0">
-            <div class="fade-bg active" style="background-image: url('foto1.jpg');"></div>
-            <div class="fade-bg" style="background-image: url('foto2.jpg');"></div>
-            <div class="fade-bg" style="background-image: url('foto3.jpg');"></div>
-            <!-- Camada escura suave -->
-            <div class="absolute inset-0 bg-[#0f0e0d]/65 backdrop-blur-[1px]"></div>
+            <div class="fixed-marketing-bg" style="background-image: url('marketing-bg.jpg');"></div>
+            <div class="absolute inset-0 bg-[#0f0e0d]/75 backdrop-blur-[2px]"></div>
         </div>
 
-        <!-- Conteúdo Centralizado sobre a Imagem -->
         <div class="relative z-10 max-w-4xl mx-auto space-y-6">
-            <span data-pt="Copywriting, Roteiros & Storytelling | Fotografia" data-en="Copywriting, Scriptwriting & Storytelling | Photography" class="inline-block px-4 py-1.5 bg-[#e60000]/30 text-[#ff6666] text-xs font-bold rounded-full border border-[#ff1a1a]/50 shadow-lg backdrop-blur-sm">
-                Copywriting, Roteiros & Storytelling | Fotografia
+            <span data-pt="Growth, Conteúdo Estratégico & Storytelling" data-en="Growth, Strategic Content & Storytelling" class="inline-block px-4 py-1.5 bg-[#e60000]/30 text-[#ff6666] text-xs font-bold rounded-full border border-[#ff1a1a]/50 shadow-lg backdrop-blur-sm">
+                Growth, Conteúdo Estratégico & Storytelling
             </span>
             <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-white drop-shadow-md">
                 Aryel Evelin
             </h1>
-            <p data-pt="Especialista em unir visão estratégica de negócios, copywriting, crescimento de audiência e storytelling de alto impacto para marcas e projetos digitais." data-en="Specialist in combining strategic business vision, copywriting, audience growth, and high-impact storytelling for brands and digital projects." class="text-[#f5f5f4] max-w-xl mx-auto text-sm leading-relaxed drop-shadow">
-                Especialista em unir visão estratégica de negócios, copywriting, crescimento de audiência e storytelling de alto impacto para marcas e projetos digitais.
+            <p data-pt="Especialista em unir visão estratégica de negócios, growth, tráfego pago, automações com IA e storytelling de alto impacto para marcas e projetos digitais." data-en="Specialist in combining strategic business vision, growth, paid traffic, AI automations, and high-impact storytelling for brands and digital projects." class="text-[#f5f5f4] max-w-xl mx-auto text-sm leading-relaxed drop-shadow">
+                Especialista em unir visão estratégica de negócios, growth, tráfego pago, automações com IA e storytelling de alto impacto para marcas e projetos digitais.
             </p>
             <div class="pt-4 flex flex-wrap justify-center gap-4">
                 <a href="#destaques" data-pt="Ver Destaques" data-en="View Highlights" class="px-6 py-3 bg-[#cc0000] hover:bg-[#b30000] text-white font-semibold rounded-lg transition shadow-lg shadow-[#cc0000]/30">
@@ -90,14 +87,31 @@
         </div>
     </section>
 
-    <!-- CONTEÚDO PRINCIPAL (DESTAQUES COM MARGENS PADRÃO) -->
+    <!-- CONTEÚDO PRINCIPAL (DESTAQUES) -->
     <main class="max-w-4xl mx-auto px-6 space-y-24 py-16">
-
-        <!-- SEÇÃO 2: DESTAQUES -->
         <section id="destaques" class="space-y-12 pt-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 
-                <!-- 1. Copywriting & VSL -->
+                <!-- 1. Paid Media & Ads -->
+                <div class="bg-[#1c1917]/50 border border-[#292524] p-6 rounded-2xl flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <span data-pt="Paid Media & Tráfego" data-en="Paid Media & Traffic" class="text-[#ff3333] text-xs font-bold uppercase tracking-wider">Paid Media & Tráfego</span>
+                        <h3 data-pt="Estratégia de Ads & Funis de Conversão" data-en="Ads Strategy & Conversion Funnels" class="text-xl font-semibold text-white">Estratégia de Ads & Funis de Conversão</h3>
+                        <p data-pt="Estruturação de campanhas de tráfego pago, análise profunda de métricas de conversão e foco analítico em ROAS para otimização de funis complexos." data-en="Structuring paid traffic campaigns, deep analysis of conversion metrics, and analytical focus on ROAS for complex funnel optimization." class="text-[#a8a29e] text-sm leading-relaxed">Estruturação de campanhas de tráfego pago, análise profunda de métricas de conversão e foco analítico em ROAS para otimização de funis complexos.</p>
+                    </div>
+                </div>
+
+                <!-- 2. AI-Driven Marketing & IA Ops -->
+                <div class="bg-[#1c1917]/50 border border-[#292524] p-6 rounded-2xl flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <span data-pt="IA Ops & Automação" data-en="AI Ops & Automation" class="text-[#ff3333] text-xs font-bold uppercase tracking-wider">IA Ops & Automação</span>
+                        <h3 data-pt="Marketing Impulsionado por IA" data-en="AI-Driven Marketing" class="text-xl font-semibold text-white">Marketing Impulsionado por IA</h3>
+                        <p data-pt="Casos práticos de uso de Inteligência Artificial na criação de conteúdo em escala, engenharia de prompts avançada, fluxos automatizados e operações de mídia." data-en="Practical use cases of AI in scalable content creation, advanced prompt engineering, automated workflows, and media operations." class="text-[#a8a29e] text-sm leading-relaxed">Casos práticos de uso de Inteligência Artificial na criação de conteúdo em escala, engenharia de prompts avançada, fluxos automatizados e operações de mídia.</p>
+                        <p data-pt="Análise e desenvolvimento de conteúdo estratégico, incluindo scripts em Python + IA para identificar os pontos fortes de cada nicho e reposicionamento no mercado com storytelling (Projeto KM - Autoral)." data-en="Strategic content analysis and development, including Python + AI scripts to identify the strengths of each niche and market repositioning with storytelling (Project KM - Authorial)." class="text-[#a8a29e] text-sm leading-relaxed pt-2">Análise e desenvolvimento de conteúdo estratégico, incluindo scripts em Python + IA para identificar os pontos fortes de cada nicho e reposicionamento no mercado com storytelling (Projeto KM - Autoral).</p>
+                    </div>
+                </div>
+
+                <!-- 3. Copywriting & VSL -->
                 <div class="bg-[#1c1917]/50 border border-[#292524] p-6 rounded-2xl flex flex-col justify-between space-y-4">
                     <div class="space-y-3">
                         <span data-pt="Copywriting & Conversão" data-en="Copywriting & Conversion" class="text-[#ff3333] text-xs font-bold uppercase tracking-wider">Copywriting & Conversão</span>
@@ -111,7 +125,7 @@
                     </div>
                 </div>
 
-                <!-- 2. Substack -->
+                <!-- 4. Substack -->
                 <div class="bg-[#1c1917]/50 border border-[#292524] p-6 rounded-2xl flex flex-col justify-between space-y-4">
                     <div class="space-y-3">
                         <span data-pt="Storytelling" data-en="Storytelling" class="text-[#ff3333] text-xs font-bold uppercase tracking-wider">Storytelling</span>
@@ -128,7 +142,7 @@
                     </div>
                 </div>
 
-                <!-- 3. Reconhecimento -->
+                <!-- 5. Reconhecimento -->
                 <div class="bg-[#1c1917]/50 border border-[#292524] p-6 rounded-2xl flex flex-col justify-between space-y-4">
                     <div class="space-y-3">
                         <span data-pt="Reconhecimento" data-en="Recognition" class="text-[#ff3333] text-xs font-bold uppercase tracking-wider">Reconhecimento</span>
@@ -142,7 +156,7 @@
                     </div>
                 </div>
 
-                <!-- 4. Artes Visuais -->
+                <!-- 6. Artes Visuais -->
                 <div class="bg-[#1c1917]/50 border border-[#292524] p-6 rounded-2xl flex flex-col justify-between space-y-4">
                     <div class="space-y-3">
                         <span data-pt="Artes Visuais" data-en="Visual Arts" class="text-[#ff3333] text-xs font-bold uppercase tracking-wider">Artes Visuais</span>
@@ -156,7 +170,7 @@
                     </div>
                 </div>
 
-                <!-- 5. Mídia & Imprensa -->
+                <!-- 7. Mídia & Imprensa -->
                 <div class="bg-[#1c1917]/50 border border-[#292524] p-6 rounded-2xl flex flex-col justify-between space-y-4">
                     <div class="space-y-3">
                         <span data-pt="Mídia & Imprensa" data-en="Media & Press" class="text-[#ff3333] text-xs font-bold uppercase tracking-wider">Mídia & Imprensa</span>
@@ -176,7 +190,7 @@
                     </div>
                 </div>
 
-                <!-- 6. Literatura -->
+                <!-- 8. Literatura -->
                 <div class="bg-[#1c1917]/50 border border-[#292524] p-6 rounded-2xl flex flex-col justify-between space-y-4">
                     <div class="space-y-3">
                         <span data-pt="Literatura" data-en="Literature" class="text-[#ff3333] text-xs font-bold uppercase tracking-wider">Literatura</span>
@@ -190,22 +204,8 @@
                     </div>
                 </div>
 
-                <!-- 7. Tecnologia -->
-                <div class="bg-[#1c1917]/50 border border-[#292524] p-6 rounded-2xl flex flex-col justify-between space-y-4">
-                    <div class="space-y-3">
-                        <span data-pt="Tecnologia" data-en="Technology" class="text-[#ff3333] text-xs font-bold uppercase tracking-wider">Tecnologia</span>
-                        <h3 data-pt="Inteligência Artificial e Python" data-en="Artificial Intelligence & Python" class="text-xl font-semibold text-white">Inteligência Artificial e Python</h3>
-                        <p data-pt="Análise e desenvolvimento de conteúdo estratégico, incluindo scripts em Python + IA para identificar os pontos fortes de cada nicho e reposicionamento no mercado com storytelling." data-en="Strategic content development and analysis, utilizing Python + AI scripts for market positioning and high-impact storytelling." class="text-[#a8a29e] text-sm leading-relaxed">Análise e desenvolvimento de conteúdo estratégico, incluindo scripts em Python + IA para identificar os pontos fortes de cada nicho e reposicionamento no mercado com storytelling.</p>
-                    </div>
-                    <div>
-                        <a href="https://drive.google.com/file/d/1lH4B2FzZ1Q41K5uO_2aD51s10l9fW8eL/view?usp=sharing" target="_blank" data-pt="Curso USP →" data-en="USP Certification →" class="inline-flex items-center gap-2 text-xs font-semibold text-[#ff3333] hover:text-[#ff6666] transition">
-                            Curso USP →
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 8. Growth & Marketing -->
-                <div class="bg-[#1c1917]/50 border border-[#292524] p-6 rounded-2xl flex flex-col justify-between space-y-4">
+                <!-- 9. Growth & Marketing -->
+                <div class="bg-[#1c1917]/50 border border-[#292524] p-6 rounded-2xl flex flex-col justify-between space-y-4 md:col-span-2">
                     <div class="space-y-3">
                         <span data-pt="Growth & Marketing" data-en="Growth & Marketing" class="text-[#ff3333] text-xs font-bold uppercase tracking-wider">Growth & Marketing</span>
                         <h3 data-pt="Case ACSPro & Podcafé Tech" data-en="ACSPro Case & Podcafé Tech" class="text-xl font-semibold text-white">Case ACSPro & Podcafé Tech</h3>
@@ -220,38 +220,9 @@
                         </a>
                     </div>
                 </div>
+
             </div>
         </section>
-
-        <!-- SEÇÃO DE COMPARTILHAMENTO -->
-        <section class="max-w-4xl mx-auto px-6 py-8 text-center border-t border-[#292524] my-12">
-            <p data-pt="Gostou do portfólio? Compartilhe com sua rede!" data-en="Liked the portfolio? Share it with your network!" class="text-xs uppercase tracking-wider text-[#a8a29e] mb-4 font-semibold">
-                Gostou do portfólio? Compartilhe com sua rede!
-            </p>
-            <div class="flex flex-wrap justify-center gap-3">
-                <!-- WhatsApp -->
-                <a href="https://api.whatsapp.com/send?text=Confira%20o%20portfólio%20da%20Aryel%20Evelin:%20https://aryel-evelin.github.io/portfolio/" target="_blank" class="px-4 py-2 bg-[#1c1917] hover:bg-[#292524] text-[#e7e5e4] border border-[#292524] rounded-lg text-xs font-semibold transition flex items-center gap-2">
-                    💬 WhatsApp
-                </a>
-                <!-- LinkedIn -->
-                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://aryel-evelin.github.io/portfolio/" target="_blank" class="px-4 py-2 bg-[#1c1917] hover:bg-[#292524] text-[#e7e5e4] border border-[#292524] rounded-lg text-xs font-semibold transition flex items-center gap-2">
-                    💼 LinkedIn
-                </a>
-                <!-- Instagram (Aviso de DM / Copiar Link Prontinho para Direct) -->
-                <button onclick="shareInstagram()" class="px-4 py-2 bg-[#1c1917] hover:bg-[#292524] text-[#e7e5e4] border border-[#292524] rounded-lg text-xs font-semibold transition flex items-center gap-2 cursor-pointer">
-                    📸 Instagram DM
-                </button>
-                <!-- E-mail -->
-                <a href="mailto:?subject=Portfólio%20-%20Aryel%20Evelin&body=Olá!%20Conheça%20o%20portfólio%20profissional%20da%20Aryel%20Evelin:%20https://aryel-evelin.github.io/portfolio/" class="px-4 py-2 bg-[#1c1917] hover:bg-[#292524] text-[#e7e5e4] border border-[#292524] rounded-lg text-xs font-semibold transition flex items-center gap-2">
-                    ✉️ <span data-pt="E-mail" data-en="Email">E-mail</span>
-                </a>
-                <!-- Copiar Link (Com Suporte Nativo a Open Graph / Share API se disponível) -->
-                <button onclick="shareLink()" class="px-4 py-2 bg-[#1c1917] hover:bg-[#292524] text-[#e7e5e4] border border-[#292524] rounded-lg text-xs font-semibold transition flex items-center gap-2 cursor-pointer">
-                    🔗 <span data-pt="Copiar Link" data-en="Copy Link">Copiar Link</span>
-                </button>
-            </div>
-        </section>
-
     </main>
 
     <!-- FOOTER -->
@@ -259,7 +230,7 @@
         <p data-pt="© 2026 Aryel Evelin. Todos os direitos reservados." data-en="© 2026 Aryel Evelin. All rights reserved.">© 2026 Aryel Evelin. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- SCRIPT EXTERNO DA APLICAÇÃO -->
-    <script src="script.js"></script>
+    <!-- SCRIPT JS -->
+    <script src="./marketing.js"></script>
 </body>
 </html>
